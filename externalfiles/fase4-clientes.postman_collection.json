@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "fe213cce-94c0-492a-9c3c-7ee03051b7ec",
+		"name": "fase4-clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8121599"
+	},
+	"item": [
+		{
+			"name": "ms-clientes",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Silva\",\r\n    \"cpfCnpj\": \"12345678900\",\r\n    \"dtNascimento\": \"1980-05-21\",\r\n    \"telefone\": \"(11) 91234-5678\",\r\n    \"email\": \"joao.silva@example.com\",\r\n    \"enderecos\": [\r\n        {\r\n            \"logradouro\": \"Rua das Flores\",\r\n            \"numero\": \"123\",\r\n            \"complemento\": \"Apto 45\",\r\n            \"bairro\": \"Centro\",\r\n            \"cidade\": \"São Paulo\",\r\n            \"estado\": \"SP\",\r\n            \"cep\": \"01000-000\"\r\n        },\r\n        {\r\n            \"logradouro\": \"Av. das Américas\",\r\n            \"numero\": \"456\",\r\n            \"complemento\": \"Casa\",\r\n            \"bairro\": \"Vila Nova\",\r\n            \"cidade\": \"Rio de Janeiro\",\r\n            \"estado\": \"RJ\",\r\n            \"cep\": \"20000-000\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Silva - ALTERADO\",\r\n    \"cpfCnpj\": \"12345678900\",\r\n    \"dtNascimento\": \"1980-05-21\",\r\n    \"telefone\": \"(11) 91234-5678\",\r\n    \"email\": \"joao.silva@example.com\",\r\n    \"enderecos\": [\r\n        {            \r\n            \"id\": 1,\r\n            \"logradouro\": \"Rua das Flores - ALTERADO\",\r\n            \"numero\": \"123\",\r\n            \"complemento\": \"Apto 45\",\r\n            \"bairro\": \"Centro\",\r\n            \"cidade\": \"São Paulo\",\r\n            \"estado\": \"SP\",\r\n            \"cep\": \"01000-000\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/clientes/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/clientes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/clientes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
