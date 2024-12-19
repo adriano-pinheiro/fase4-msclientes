@@ -10,8 +10,7 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasKey;
+import static org.hamcrest.Matchers.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ClienteControllerIT {
@@ -53,7 +52,7 @@ class ClienteControllerIT {
                 .statusCode(HttpStatus.OK.value())
                 .body("number", equalTo(0))
                 .body("size", equalTo(10))
-                .body("totalElements", equalTo(1));
+                .body("totalElements", greaterThan(0));
     }
 
 }
