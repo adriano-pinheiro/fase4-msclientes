@@ -3,7 +3,6 @@ package br.com.techchallenge4.msclientes.controller;
 import br.com.techchallenge4.msclientes.dto.ClienteDTO;
 import br.com.techchallenge4.msclientes.service.ClienteService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class ClienteController {
 
-    @Autowired
     private final ClienteService clienteService;
 
     @GetMapping

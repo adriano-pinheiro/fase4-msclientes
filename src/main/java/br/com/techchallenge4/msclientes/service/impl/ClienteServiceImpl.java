@@ -10,7 +10,6 @@ import br.com.techchallenge4.msclientes.repository.EnderecoRepository;
 import br.com.techchallenge4.msclientes.service.ClienteService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -21,10 +20,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ClienteServiceImpl implements ClienteService {
 
-    @Autowired
     private final ClienteRepository clienteRepository;
 
-    @Autowired
     private final EnderecoRepository enderecoRepository;
 
     @Override
